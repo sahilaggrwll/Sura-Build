@@ -18,7 +18,15 @@ import {
   FaTwitter,
   FaFacebook,
   FaClock,
-  FaMobile
+  FaMobile,
+  FaCalculator,
+  FaSearch,
+  FaChartLine,
+  FaHandshake,
+  FaClipboardList,
+  FaFileContract,
+  FaBalanceScale,
+  FaLightbulb
 } from 'react-icons/fa';
 import './App.css';
 
@@ -37,20 +45,22 @@ function App() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const services = [
-    { icon: <FaBuilding />, title: "Commercial Electrical", description: "Complete electrical solutions for commercial buildings and offices" },
-    { icon: <FaIndustry />, title: "Industrial Electrical", description: "Heavy electrical systems for industrial facilities and factories" },
-    { icon: <FaRoad />, title: "Electrical Infrastructure", description: "Power distribution, transformers, and electrical infrastructure" },
-    { icon: <FaHardHat />, title: "Maintenance & Repair", description: "Electrical maintenance, repairs, and emergency services" }
+    { icon: <FaCalculator />, title: "Preconstruction Cost Estimation", description: "Comprehensive cost analysis and budget planning for construction projects" },
+    { icon: <FaSearch />, title: "Subcontractor Sourcing", description: "Expert vetting and selection of qualified subcontractors for your projects" },
+    { icon: <FaChartLine />, title: "Project Feasibility Analysis", description: "Detailed market research and project viability assessments" },
+    { icon: <FaHandshake />, title: "Contract Negotiation", description: "Professional contract management and negotiation services" }
   ];
 
   const projects = [
-    { name: "OHE Work for Indian Railways", type: "Railway Infrastructure", image: process.env.PUBLIC_URL + "/Project.jpeg" }
+    { name: "Commercial Complex Cost Analysis", type: "Preconstruction Planning", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" },
+    { name: "Industrial Facility Estimation", type: "Cost Estimation", image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800" },
+    { name: "Residential Development Planning", type: "Feasibility Study", image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800" }
   ];
 
   const stats = [
-    { number: "3+", label: "Years Experience" },
-    { number: "10+", label: "Team Members" },
-    { number: "100%", label: "Client Satisfaction" }
+    { number: "5+", label: "Years Experience" },
+    { number: "50+", label: "Projects Completed" },
+    { number: "95%", label: "Cost Accuracy" }
   ];
 
   const contactInfo = [
@@ -64,7 +74,7 @@ function App() {
     {
       icon: <FaEnvelope />,
       title: "Email",
-      details: "mysdconstructionwork@gmail.com",
+      details: "info@suarabuild.com",
       subtitle: "Send us a message"
     },
     {
@@ -92,8 +102,7 @@ function App() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <img src={process.env.PUBLIC_URL + "/logo.png"} alt="SD Construction Works Logo" className="logo-icon" />
-            <img src={process.env.PUBLIC_URL + "/text.png"} alt="SD Construction Works Text" className="logo-text" />
+            <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Sura Build Logo" className="logo-icon" />
           </motion.div>
           
           <div className="nav-menu">
@@ -130,17 +139,17 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Powering Your Future with Reliable Electrical Solutions
+            Expert Preconstruction Services & Cost Estimation
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            We are a premier construction and electrical company, 
-            delivering excellence in commercial, industrial, and residential projects. 
-            With years of expertise and a commitment to innovation, we provide cutting-edge 
-            electrical solutions that power your success with unmatched reliability and quality.
+            We are a premier construction services firm specializing in preconstruction 
+            cost estimation, subcontractor sourcing, and project feasibility analysis. 
+            With years of expertise and industry knowledge, we help you make informed 
+            decisions and optimize your construction projects for maximum efficiency and profitability.
           </motion.p>
           <motion.div 
             className="hero-buttons"
@@ -157,7 +166,7 @@ function App() {
           </motion.div>
         </div>
         <div className="hero-image">
-          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800" alt="Electrical Work" />
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800" alt="Construction Services" />
         </div>
       </section>
 
@@ -176,8 +185,8 @@ function App() {
             >
               <div className="stat-icon">
                 {index === 0 && <FaClock />}
-                {index === 1 && <FaUsers />}
-                {index === 2 && <FaStar />}
+                {index === 1 && <FaClipboardList />}
+                {index === 2 && <FaChartLine />}
               </div>
               <div className="stat-content">
                 <h3>{stat.number}</h3>
@@ -198,8 +207,8 @@ function App() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2>About SD Construction Work</h2>
-            <p>Delivering reliable electrical solutions with safety and innovation</p>
+            <h2>About Sura Build</h2>
+            <p>Delivering expert preconstruction services with precision and reliability</p>
           </motion.div>
           
           <div className="about-content">
@@ -210,20 +219,14 @@ function App() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3>Our Mission</h3>
-              <p>
-                To provide exceptional electrical services that power businesses and homes 
-                with innovative, safe, and energy-efficient solutions while maintaining 
-                the highest standards of quality and customer satisfaction.
-              </p>
               
               <h3>Our Values</h3>
               <ul>
-                <li><FaCheckCircle /> Safety First - Zero electrical accidents, every project</li>
-                <li><FaCheckCircle /> Quality Excellence - Superior electrical workmanship</li>
-                <li><FaCheckCircle /> Innovation - Latest electrical technologies and methods</li>
+                <li><FaCheckCircle /> Accuracy First - Precise cost estimation and analysis</li>
+                <li><FaCheckCircle /> Quality Excellence - Superior services and planning</li>
+                <li><FaCheckCircle /> Innovation - Latest industry tools and methodologies</li>
                 <li><FaCheckCircle /> Integrity - Honest, transparent, and ethical practices</li>
-                <li><FaCheckCircle /> Energy Efficiency - Sustainable electrical solutions</li>
+                <li><FaCheckCircle /> Client Success - Dedicated to your project's success</li>
               </ul>
             </motion.div>
             
@@ -234,7 +237,7 @@ function App() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600" alt="Electrical Team" />
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500" alt="Sura Build Team" />
             </motion.div>
           </div>
         </div>
@@ -250,8 +253,8 @@ function App() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2>SD Construction Work Services</h2>
-            <p>Comprehensive electrical solutions for every need</p>
+            <h2>Our Services</h2>
+            <p>Comprehensive preconstruction solutions for every project</p>
           </motion.div>
           
           <div className="services-grid">
@@ -285,7 +288,7 @@ function App() {
             viewport={{ once: true }}
           >
             <h2>Featured Projects</h2>
-            <p>Showcasing our latest and most impressive work</p>
+            <p>Showcasing our expertise in preconstruction planning and cost estimation</p>
           </motion.div>
           
           <div className="projects-grid">
@@ -326,7 +329,7 @@ function App() {
             viewport={{ once: true }}
           >
             <h2>Meet Our Team</h2>
-            <p>Meet the experts behind SD Construction Works</p>
+            <p>Expert professionals dedicated to your project's success</p>
           </motion.div>
           
           <div className="testimonials-grid">
@@ -338,13 +341,12 @@ function App() {
               viewport={{ once: true }}
             >
               <h3>Sushant Saxena</h3>
-              <span className="team-role">Founder</span>
-              <p>Mr. Sushant Saxena is an accomplished professional with diverse experience spanning the engineering industries. Known for his hands-on approach to project execution and cross-disciplinary coordination, he has contributed to the successful delivery of infrastructure, construction, and utility projects across various sectors.</p>
+              <span className="team-role">Senior Consultant</span>
+              <p>Mr. Sushant Saxena is an accomplished construction professional with diverse experience spanning the engineering industries. Known for his analytical approach to cost estimation and cross-disciplinary coordination, he has contributed to the successful planning of infrastructure, construction, and development projects across various sectors.</p>
               <div className="team-expertise">
-                <span>Electrical Engineering</span>
-                <span>Project Management</span>
-                <span>Safety Standards</span>
-                <span>Electrical Design</span>
+                <span>Cost Estimation</span>
+                <span>Project Planning</span>
+                <span>Contract Management</span>
               </div>
             </motion.div>
             
@@ -356,12 +358,12 @@ function App() {
               viewport={{ once: true }}
             >
               <h3>Dinesh Saxena</h3>
-              <span className="team-role">Co-Founder</span>
-              <p>Mr. Dinesh Saxena's objective is to remain dedicated to building and developing diverse, capable teams that can deliver effective, forward-thinking solutions to complex engineering and operational challenges faced by organizations and communities.</p>
+              <span className="team-role">Lead Estimator</span>
+              <p>Mr. Dinesh Saxena's objective is to remain dedicated to building and developing diverse, capable teams that can deliver effective, forward-thinking solutions to complex construction planning and cost estimation challenges faced by organizations and communities.</p>
               <div className="team-expertise">
-                <span>Electrical Design</span>
+                <span>Cost Analysis</span>
                 <span>Project Management</span>
-                <span>Safety Standards</span>
+                <span>Subcontractor Sourcing</span>
               </div>
             </motion.div>
             
@@ -373,12 +375,12 @@ function App() {
               viewport={{ once: true }}
             >
               <h3>Sahil Aggarwal</h3>
-              <span className="team-role">Vice President</span>
-              <p>As our Vice President with a strong background in Computer Science, Sahil brings cutting-edge technical expertise to SD Construction Works. His deep understanding of software systems, automation, and digital solutions enables us to implement innovative electrical technologies and smart building solutions.</p>
+              <span className="team-role">Technical Consultant</span>
+              <p>As our Technical Consultant with a strong background in Computer Science, Sahil brings cutting-edge technical expertise to Sura Build. His deep understanding of software systems, automation, and digital solutions enables us to implement innovative project management tools and advanced cost estimation methodologies.</p>
               <div className="team-expertise">
-                <span>Computer Science</span>
                 <span>Technical Innovation</span>
-                <span>Smart Systems</span>
+                <span>Digital Solutions</span>
+                <span>Process Optimization</span>
               </div>
             </motion.div>
           </div>
@@ -396,7 +398,7 @@ function App() {
             viewport={{ once: true }}
           >
             <h2>Get In Touch</h2>
-            <p>Ready to start your next electrical project?</p>
+            <p>Ready to optimize your construction project with expert services?</p>
           </motion.div>
           
           <div className="contact-grid">
@@ -433,7 +435,7 @@ function App() {
             <h3>Follow Us</h3>
             <p>Stay connected with us on LinkedIn</p>
             <div className="social-links">
-              <a href="https://www.linkedin.com/company/sd-construction-work" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/company/sura-build" target="_blank" rel="noopener noreferrer" className="social-link">
                 <FaLinkedin />
                 <span>LinkedIn</span>
               </a>
@@ -448,9 +450,9 @@ function App() {
           <div className="footer-content">
             <div className="footer-section">
               <div className="footer-logo">
-                <img src={process.env.PUBLIC_URL + "/text.png"} alt="SD Construction Works Text" className="logo-text" />
+                <img src={process.env.PUBLIC_URL + "/logo.png"} alt="Sura Build Logo" className="logo-icon" />
               </div>
-              <p>Building excellence, delivering results, and creating lasting value for our clients and communities.</p>
+              <p>Providing expert preconstruction services, delivering accurate cost estimates, and creating lasting value for our clients through innovative solutions.</p>
             </div>
             
             <div className="footer-section">
@@ -464,10 +466,10 @@ function App() {
             
             <div className="footer-section">
               <h4>Services</h4>
-              <a href="#services">Commercial Electrical</a>
-              <a href="#services">Industrial Electrical</a>
-              <a href="#services">Electrical Infrastructure</a>
-              <a href="#services">Maintenance & Repair</a>
+              <a href="#services">Cost Estimation</a>
+              <a href="#services">Subcontractor Sourcing</a>
+              <a href="#services">Feasibility Analysis</a>
+              <a href="#services">Contract Negotiation</a>
             </div>
             
             <div className="footer-section">
@@ -476,13 +478,13 @@ function App() {
                 <p><FaPhone /> +91 96600 22114</p>
                 <p><FaMobile /> +91 98878 54588</p>
               </div>
-              <p><FaEnvelope /> mysdconstructionwork@gmail.com</p>
+              <p><FaEnvelope /> info@suarabuild.com</p>
               <p><FaMapMarkerAlt /> 1440/26, Ambay Shree Colony, Vigyan Nagar, Adarsh Nagar, Ajmer, Rajasthan, 305001</p>
             </div>
           </div>
           
           <div className="footer-bottom">
-            <p>&copy; 2025 SD Construction Works. All rights reserved.</p>
+            <p>&copy; 2025 Sura Build. All rights reserved.</p>
           </div>
         </div>
       </footer>
