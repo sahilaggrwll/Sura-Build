@@ -1,0 +1,15 @@
+{
+  "short_name": "SD Construction Work",
+  "name": "SD Construction Work - Construction & Electrical Company",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512 256x256 128x128 64x64 32x32 16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4CAF50",
+  "background_color": "#ffffff"
+}

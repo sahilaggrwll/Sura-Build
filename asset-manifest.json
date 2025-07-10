@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sura-Build/static/css/main.c867c68b.css",
+    "main.js": "/Sura-Build/static/js/main.745aa324.js",
+    "static/js/453.e2cff48a.chunk.js": "/Sura-Build/static/js/453.e2cff48a.chunk.js",
+    "index.html": "/Sura-Build/index.html",
+    "main.c867c68b.css.map": "/Sura-Build/static/css/main.c867c68b.css.map",
+    "main.745aa324.js.map": "/Sura-Build/static/js/main.745aa324.js.map",
+    "453.e2cff48a.chunk.js.map": "/Sura-Build/static/js/453.e2cff48a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c867c68b.css",
+    "static/js/main.745aa324.js"
+  ]
+}
