@@ -65,22 +65,15 @@ function App() {
 
   const contactInfo = [
     {
-      icon: <FaPhone />,
-      title: "Phone",
-      details: "+91 96600 22114",
-      details2: "+91 98878 54588",
-      subtitle: "Call us anytime"
-    },
-    {
       icon: <FaEnvelope />,
       title: "Email",
-      details: "info@suarabuild.com",
+      details: "info@surabuild.com",
       subtitle: "Send us a message"
     },
     {
       icon: <FaMapMarkerAlt />,
       title: "Office",
-      details: "1440/26, Ambay Shree Colony, Vigyan Nagar, Adarsh Nagar, Ajmer, Rajasthan, 305001",
+      details: "12 Sylvan Glen Ct,Burr Ridge, IL 60547, USA",
       subtitle: "Visit our headquarters"
     },
     {
@@ -418,7 +411,6 @@ function App() {
                 <div className="contact-details">
                   <h3>{info.title}</h3>
                   <p className="contact-main">{info.details}</p>
-                  <p className="contact-main">{info.details2}</p>
                   <p className="contact-subtitle">{info.subtitle}</p>
                 </div>
               </motion.div>
@@ -474,12 +466,8 @@ function App() {
             
             <div className="footer-section">
               <h4>Contact Info</h4>
-              <div>
-                <p><FaPhone /> +91 96600 22114</p>
-                <p><FaMobile /> +91 98878 54588</p>
-              </div>
-              <p><FaEnvelope /> info@suarabuild.com</p>
-              <p><FaMapMarkerAlt /> 1440/26, Ambay Shree Colony, Vigyan Nagar, Adarsh Nagar, Ajmer, Rajasthan, 305001</p>
+              <p><FaEnvelope /> info@surabuild.com</p>
+              <p><FaMapMarkerAlt /> 12 Sylvan Glen Ct,Burr Ridge, IL 60547, USA</p>
             </div>
           </div>
           
